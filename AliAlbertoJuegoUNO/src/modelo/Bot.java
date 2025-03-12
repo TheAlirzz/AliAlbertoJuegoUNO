@@ -2,6 +2,8 @@ package modelo;
 
 import java.util.Random;
 
+import modelo.Carta.Colores;
+
 public class Bot extends Jugador {
 
 	public Bot(String nombre) {
