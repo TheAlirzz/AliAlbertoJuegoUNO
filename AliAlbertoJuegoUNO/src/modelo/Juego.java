@@ -1,8 +1,9 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-import modelo.*;
+
 import modelo.Carta.Colores;
 
 public class Juego {
@@ -14,19 +15,21 @@ public class Juego {
 	private int puntosMaximo;
 	
 	public Juego(int numBots) {
+		Scanner sc = new Scanner(System.in);
 		this.puntosMaximo = 500;
 		this.jugadores = new ArrayList<Jugador>();
 		this.baraja = new Baraja();
 		this.turnoActual = 0;
 		this.sentidoHorario = true;
 		String nombreJugador;
-		/*do {
-			nombreJugador = JOptionPane.showInputDialog("Introduce tu nombre:");
+		do {
+			System.out.println("Introduce tu nombre:");	
+			nombreJugador = sc.nextLine();
 		} while(nombreJugador == null || nombreJugador.trim().isEmpty());
 		jugadores.add(new Jugador(nombreJugador));
 		for (int i = 1; i <= numBots; i++) {
 			jugadores.add(new Bot("Bot " + i));
-		}*/
+		}
 		repartirCartasIniciales();
 	}
 	

@@ -2,6 +2,10 @@ package modelo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+
+import modelo.Carta.Colores;
+import modelo.Carta.TipoCarta;
 public class Baraja {
 		
 		private ArrayList<Carta> mazoRobar;
